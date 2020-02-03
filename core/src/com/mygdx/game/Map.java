@@ -19,13 +19,6 @@ public class Map {
 
         walls = new Wall[cells_height][cells_width];
 
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                System.out.print(j);
-            }
-            System.out.println("");
-        }
-
         for (int i = 0; i < cells_height; i++) {
             for (int j = 0; j < cells_width; j++) {
                 if(i==0 || i==cells_height-1 || j==cells_width-1 || j==0) {
