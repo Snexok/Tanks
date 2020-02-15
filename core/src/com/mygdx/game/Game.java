@@ -58,11 +58,11 @@ public class Game extends ApplicationAdapter {
 	}
 
 	public void update(float dt) {
-		botTimer += dt;
-		if (botTimer >= botTimerTo) {
-			botTimer = 0;
-			bots.activate(MathUtils.random(32, Gdx.graphics.getWidth()) - 32, MathUtils.random(32, Gdx.graphics.getHeight() - 32));
-		}
+//		botTimer += dt;
+//		if (botTimer >= botTimerTo) {
+//			botTimer = 0;
+//			bots.activate(MathUtils.random(32, Gdx.graphics.getWidth()) - 32, MathUtils.random(32, Gdx.graphics.getHeight() - 32));
+//		}
 
 		player.update(dt);
 		checkPlayerCollision();

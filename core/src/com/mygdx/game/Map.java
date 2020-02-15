@@ -26,13 +26,13 @@ public class Map {
                 }
             }
         }
-//        for (int i = 1; i < cells_height-1; i++) {
-//            for (int j = 1; j < cells_width-1; j++) {
-//                if((j==3 || j==4) && (i!=cells_height-2 && i!=cells_height-3)) {
-//                    walls[i][j] = new BrickWall(j*16, i*16, atlas);
-//                }
-//            }
-//        }
+        for (int i = 1; i < cells_height-1; i++) {
+            for (int j = 1; j < cells_width-1; j++) {
+                if((j==3 || j==4) && (i!=cells_height-2 && i!=cells_height-3)) {
+                    walls[i][j] = new BrickWall(j*16, i*16, atlas);
+                }
+            }
+        }
     }
 
     public boolean checkWallCollision(Active active, float dt) {

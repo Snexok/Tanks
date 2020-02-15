@@ -56,21 +56,25 @@ public abstract class Active extends Obj{
         points[1] = new Vector2();
 
         if (direction == Direction.UP) {
-            points[0].set(this.rect.x, this.rect.y + this.rect.height);
-            points[1].set(this.rect.x + this.rect.width, this.rect.y + this.rect.height);
+            points[0].set(this.rect.x + 1, this.rect.y + this.rect.height);
+            points[1].set(this.rect.x - 1 + this.rect.width, this.rect.y + this.rect.height);
         }
         else if (direction == Direction.RIGHT) {
-            points[0].set(this.rect.x + this.rect.width, this.rect.y);
-            points[1].set(this.rect.x + this.rect.width, this.rect.y + this.rect.height);
+            points[0].set(this.rect.x + this.rect.width, this.rect.y + 1);
+            points[1].set(this.rect.x + this.rect.width, this.rect.y - 1 + this.rect.height);
         }
         else if (direction == Direction.DOWN) {
-            points[0].set(this.rect.x, this.rect.y);
-            points[1].set(this.rect.x + this.rect.width, this.rect.y);
+            points[0].set(this.rect.x + 1, this.rect.y);
+            points[1].set(this.rect.x - 1 + this.rect.width, this.rect.y);
         }
         else if (direction == Direction.LEFT) {
-            points[0].set(this.rect.x, this.rect.y);
-            points[1].set(this.rect.x, this.rect.y + this.rect.height);
+            points[0].set(this.rect.x, this.rect.y + 3);
+            points[1].set(this.rect.x, this.rect.y - 1 + this.rect.height);
         }
+
+        System.out.println(points[0]);
+        System.out.println(rect.x+rect.width);
+        System.out.println(rect.y+rect.height);
 
         return rect.contains(points[0]) ||
                 rect.contains(points[1]);
